@@ -273,9 +273,12 @@ opacity: 1;
 
 /* кофе */
 .coffee {
-  width: 280px;
-  z-index: 2;
-  position: relative;
+  position: absolute;
+  top: 42%; /* было 50% → поднимаем вверх */
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  width: 260px;
 }
 
 /* текст */
@@ -357,14 +360,7 @@ opacity: 1;
 }
 
 /* кофе */
-.coffee {
-  position: absolute;
-  top: 50%;
-  left: 50%;
 
-  transform: translate(-50%, -50%);
-  width: 260px;
-}
 
 /* заголовок */
 .center h2 {
@@ -396,6 +392,14 @@ opacity: 1;
   background-position: center;
 
   z-index: 1;
+}
+
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35); /* затемнение */
 }
 .content {
   position: relative;
