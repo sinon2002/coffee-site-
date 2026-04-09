@@ -260,7 +260,7 @@ opacity: 1;
   margin-top: 80px;
   padding: 120px 80px;
   border-radius: 30px;
-  background: radial-gradient(circle at center, #7b4b3a, #4b2e2b);
+
   color: white;
   overflow: hidden;
 }
@@ -286,7 +286,8 @@ opacity: 1;
   padding: 20px;
   border-radius: 20px;
 
-  background: rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.35);
+backdrop-filter: blur(14px);
   backdrop-filter: blur(12px);
 
   color: white;
@@ -326,7 +327,7 @@ opacity: 1;
 .textBlock p {
   font-size: 15px;
   opacity: 1;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9);
   margin-top: 6px;
   line-height: 1.5;
 }
