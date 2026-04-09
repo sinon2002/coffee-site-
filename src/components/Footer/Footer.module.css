@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 80px;
+  padding: 40px;
+  background: #2a1f1b;
+  color: white;
+}
+
+.top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.middle h4 {
+  margin-bottom: 10px;
+}
+
+.bottom {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+}

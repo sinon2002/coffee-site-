@@ -1,0 +1,379 @@
+.menu {
+  width: 100%;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.menu p {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.cards {
+  display: grid;
+
+  /* 🔥 автоматически растягивается */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  position: relative;
+  background: #f5e1d8;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 120px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  transition: 0.3s;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.likes {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.bottom button {
+  background: #6b3e2e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bottom button:hover {
+  background: #4b2e2b;
+}
+
+button {
+  background: #c59d5f;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.beans {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 40px;
+  opacity: 0.7;
+}
+
+
+.decor {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  width: 90px;
+  height: 90px;
+opacity: 1;
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  opacity: 0.15;
+  pointer-events: none;
+}
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 40px 60px;
+
+  max-width: 1100px; /* 🔥 главное */
+  margin: 60px auto; /* центрирует */
+
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #7a4b33, #4b2e2b);
+  color: white;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ декоративные линии (как на макете) */
+.banner::before {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05), transparent);
+}
+
+/* 📸 картинка */
+.banner img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* 📝 текст */
+.bannerText {
+  max-width: 800px;
+  z-index: 2;
+ 
+}
+.images {
+  display: flex;
+  align-items: center;
+  gap: 0; /* ❗ убрать расстояние */
+}
+
+/* пачки кофе */
+.pack {
+  width: 200px;
+  z-index: 2;
+}
+
+/* зерна */
+.beans {
+  width: 180px;
+  
+  margin-left: -60px; /* 🔥 СЕКРЕТ — сдвигаем влево */
+  
+  z-index: 1;
+}
+
+.bannerText h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.bannerText p {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+ color: rgba(255, 255, 255, 0.9);
+  margin-top: 8px;
+  max-width: 600px;
+}
+
+/* 📱 адаптив */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner img {
+    width: 140px;
+  }
+}
+
+.banner img:hover {
+  transform: scale(1.05);
+}
+
+/* текст */
+.bannerText h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.bannerText p {
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner img {
+  position: relative;
+  z-index: 2;
+}
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.1)
+  );
+}
+
+/* ===== ОСНОВНОЙ БЛОК ===== */
+.sliderBlock {
+  position: relative;
+  margin-top: 80px;
+  padding: 120px 80px;
+  border-radius: 30px;
+  background: radial-gradient(circle at center, #7b4b3a, #4b2e2b);
+  color: white;
+  overflow: hidden;
+}
+
+/* центр */
+.center {
+  position: relative;
+  text-align: center;
+}
+
+/* кофе */
+.coffee {
+  width: 280px;
+  z-index: 2;
+  position: relative;
+}
+
+/* текст */
+.textBlock {
+  position: absolute;
+  width: 240px;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* позиции */
+.leftTop {
+  top: 20%;
+  left: 5%;
+}
+
+.leftBottom {
+  bottom: 20%;
+  left: 5%;
+}
+
+.rightTop {
+  top: 20%;
+  right: 5%;
+}
+
+.rightBottom {
+  bottom: 20%;
+  right: 5%;
+}
+
+/* текст */
+.textBlock h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.textBlock p {
+  font-size: 15px;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+.textBlock {
+  position: absolute;
+  width: 260px;
+  background: rgba(184, 115, 115, 0.08);
+  padding: 20px 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+
+  transition: all 0.4s ease;
+}
+
+/* эффект при наведении 🔥 */
+.textBlock:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== ЦЕНТР ===== */
+.center {
+  text-align: center;
+}
+
+/* кофе */
+.coffee {
+  width: 330px;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.5s ease;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+
+/* заголовок */
+.center h2 {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+/* ===== АНИМАЦИЯ ===== */
+.show {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

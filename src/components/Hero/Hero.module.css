@@ -1,0 +1,185 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+background: linear-gradient(135deg, #f5e1d8, #f3d6c6);
+  display: flex;
+  align-items: center;
+  padding: 100px 60px;
+}
+
+.container {
+  z-index: 2;
+  padding-left: 100px;
+  max-width: 550px;
+}
+
+.content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  color: #4b2e2b;
+}
+
+.content p {
+  font-family: 'Inter', sans-serif;
+  color: #6b4c45;
+  font-size: 18px;
+}
+/* ☕ СЛАЙДЕР */
+.slider {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%; /* ВАЖНО */
+  height: 100%;
+  overflow: hidden; /* убирает чёрную полосу */
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* главный */
+.active {
+  left: 65%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* слева */
+.previous {
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0.6;
+  filter: blur(4px);
+}
+
+/* справа */
+.next {
+  left: 80%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0.6;
+  filter: blur(4px);
+}
+
+/* остальные */
+.inactive {
+  opacity: 0;
+}
+
+/* 🎨 ФОН */
+.backgrounds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.bgActive {
+  opacity: 1;
+}
+
+
+
+.wave {
+  animation: waveMove 6s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+  100% { transform: translateX(0); }
+}
+.coffee {
+  width: 300px;
+  transition: all 0.8s ease;
+}
+.text h1 {
+  font-size: 60px;
+  color: #4b2e2b;
+}
+
+.text p {
+  color: #6b4c45;
+}
+
+.waveWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0;
+  bottom: -70px;
+  left: -50%;
+  animation: waveMove 6s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(40px); }
+  100% { transform: translateX(0); }
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.primary {
+  background: #6b3e2e;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary:hover {
+  background: #4b2e2b;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid #6b3e2e;
+  color: #6b3e2e;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary:hover {
+  background: #6b3e2e;
+  color: white;
+}
+.leaves {
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/leaf.png");
+  opacity: 0.08;
+  z-index: 0;
+}
