@@ -332,13 +332,15 @@ opacity: 1;
 }
 .textBlock {
   position: absolute;
-  width: 260px;
-  background: rgba(184, 115, 115, 0.08);
-  padding: 20px 24px;
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
+  width: 240px;
 
-  transition: all 0.4s ease;
+  padding: 20px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  color: white;
 }
 
 /* эффект при наведении 🔥 */
@@ -354,11 +356,14 @@ opacity: 1;
 
 /* кофе */
 .coffee {
-  width: 330px;
-  height: auto;
-  object-fit: contain;
-  transition: opacity 0.5s ease;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  width: 260px;
+
+  transition: 0.5s;
 }
 
 /* заголовок */
@@ -376,4 +381,23 @@ opacity: 1;
 .hide {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+.promoBlock {
+  position: relative;
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.bg {
+  position: absolute;
+  inset: 0;
+
+  background: url("/your-image.jpg") center/cover no-repeat;
+
+  z-index: 1;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
 }
