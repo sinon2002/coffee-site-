@@ -10,6 +10,7 @@ import zerno1 from "../../assets/zerno1.png";
 import ascofee1 from "../../assets/ascofee1.jpg";
 import ascofee2 from "../../assets/ascofee2.jpg";
 import beans from "../../assets/coffee-beans.png";
+import fon from "../../assets/fon.png";
 export default function Menu() {
 const items = [
   {
@@ -136,10 +137,13 @@ useEffect(() => {
 <div className={styles.promoBlock}>
 
   {/* ФОН */}
-  <div className={styles.bg}></div>
+ <div className={styles.promoBlock}>
 
   {/* КОНТЕНТ */}
-  <div className={styles.content}>
+ <div
+  className={styles.bg}
+  style={{ backgroundImage: `url(${fon})` }}
+></div>
 
     {/* КОФЕ */}
     <img
