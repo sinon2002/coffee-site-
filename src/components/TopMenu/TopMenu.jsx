@@ -133,9 +133,15 @@ useEffect(() => {
 
 </div>
 
-<div className={styles.sliderBlock}>
-  <div className={styles.center}>
+<div className={styles.promoBlock}>
 
+  {/* ФОН */}
+  <div className={styles.bg}></div>
+
+  {/* КОНТЕНТ */}
+  <div className={styles.content}>
+
+    {/* КОФЕ */}
     <img
       src={slides[index].img}
       className={`${styles.coffee} ${fade ? styles.show : styles.hide}`}
@@ -143,28 +149,25 @@ useEffect(() => {
 
     <h2>{slides[index].title}</h2>
 
-    {/* ЛЕВО ВЕРХ */}
+    {/* ТЕКСТЫ */}
     <div className={`${styles.textBlock} ${styles.leftTop}`}>
       <h4>{slides[index].leftTop}</h4>
-      <p>{slides[index].leftBottom}</p>
-    </div>
-
-    {/* ЛЕВО НИЗ */}
-    <div className={`${styles.textBlock} ${styles.leftBottom}`}>
-      <h4>{slides[index].leftBottom}</h4>
       <p>{slides[index].leftDesc}</p>
     </div>
 
-    {/* ПРАВО ВЕРХ */}
-    <div className={`${styles.textBlock} ${styles.rightTop}`}>
-      <h4>{slides[index].rightTop}</h4>
-      <p>{slides[index].rightBottom}</p>
+    <div className={`${styles.textBlock} ${styles.leftBottom}`}>
+      <h4>{slides[index].leftBottom}</h4>
+      <p>{slides[index].leftDesc2}</p>
     </div>
 
-    {/* ПРАВО НИЗ */}
+    <div className={`${styles.textBlock} ${styles.rightTop}`}>
+      <h4>{slides[index].rightTop}</h4>
+      <p>{slides[index].rightDesc}</p>
+    </div>
+
     <div className={`${styles.textBlock} ${styles.rightBottom}`}>
       <h4>{slides[index].rightBottom}</h4>
-      <p>{slides[index].rightDesc}</p>
+      <p>{slides[index].rightDesc2}</p>
     </div>
 
   </div>
