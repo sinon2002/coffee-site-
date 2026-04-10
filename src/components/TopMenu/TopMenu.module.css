@@ -278,7 +278,7 @@ opacity: 1;
 /* ===== КОФЕ ===== */
 .coffee {
   position: absolute;
-  top: 42%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -290,7 +290,7 @@ opacity: 1;
 
 /* ===== ЗАГОЛОВОК ===== */
 .center h2 {
-  margin-top: 260px;
+  margin-top: 200px;
   font-size: 28px;
   font-weight: 700;
 }
@@ -319,22 +319,22 @@ opacity: 1;
 
 /* ===== ПОЗИЦИИ ===== */
 .leftTop {
-  top: 20%;
+  top: 16%;
   left: 5%;
 }
 
 .leftBottom {
-  bottom: 20%;
+  bottom: 16%;
   left: 5%;
 }
 
 .rightTop {
-  top: 20%;
+  top: 16%;
   right: 5%;
 }
 
 .rightBottom {
-  bottom: 20%;
+  bottom: 16%;
   right: 5%;
 }
 
