@@ -255,30 +255,47 @@ opacity: 1;
 }
 
 /* ===== ОСНОВНОЙ БЛОК ===== */
+/* ===== ОСНОВНОЙ БЛОК ===== */
 .sliderBlock {
   position: relative;
   margin-top: 80px;
   padding: 120px 80px;
   border-radius: 30px;
-
-  color: white;
   overflow: hidden;
+
+  /* красивый кофейный фон */
+  background: radial-gradient(circle at center, #7b4b3a, #4b2e2b);
+  color: white;
 }
 
-/* центр */
+/* ===== ЦЕНТР ===== */
+.center {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
 
-
-/* кофе */
+/* ===== КОФЕ ===== */
 .coffee {
   position: absolute;
-  top: 42%; /* было 50% → поднимаем вверх */
+  top: 42%;
   left: 50%;
-
   transform: translate(-50%, -50%);
+
   width: 260px;
+
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
+  transition: 0.5s;
 }
 
-/* текст */
+/* ===== ЗАГОЛОВОК ===== */
+.center h2 {
+  margin-top: 260px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ===== БЛОКИ С ТЕКСТОМ ===== */
 .textBlock {
   position: absolute;
   width: 240px;
@@ -286,16 +303,21 @@ opacity: 1;
   padding: 20px;
   border-radius: 20px;
 
-  background: rgba(0,0,0,0.35);
-backdrop-filter: blur(14px);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
 
   color: white;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: 0.3s;
 }
 
-/* позиции */
+/* hover эффект */
+.textBlock:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: rgba(255,255,255,0.12);
+}
+
+/* ===== ПОЗИЦИИ ===== */
 .leftTop {
   top: 20%;
   left: 5%;
@@ -316,46 +338,18 @@ backdrop-filter: blur(14px);
   right: 5%;
 }
 
-/* текст */
+/* ===== ТЕКСТ ===== */
 .textBlock h4 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 6px;
-  color: #ffffff;
 }
 
 .textBlock p {
-  font-size: 15px;
-  opacity: 1;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 6px;
-  line-height: 1.5;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-
-/* эффект при наведении 🔥 */
-.textBlock:hover {
-  transform: translateY(-5px) scale(1.03);
-  background: rgba(255, 255, 255, 0.12);
-}
-
-/* ===== ЦЕНТР ===== */
-.center {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  text-align: center;
-}
-
-/* кофе */
-
-
-/* заголовок */
-.center h2 {
-  margin-top: 25px;
-  font-size: 28px;
-  font-weight: 700;
-}
 /* ===== АНИМАЦИЯ ===== */
 .show {
   opacity: 1;
@@ -365,32 +359,4 @@ backdrop-filter: blur(14px);
 .hide {
   opacity: 0;
   transition: opacity 0.5s ease;
-}
-.promoBlock {
-  position: relative;
-  height: 500px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.bg {
-  position: absolute;
-  inset: 0;
-
-  background-size: cover;
-  background-position: center;
-
-  z-index: 1;
-}
-
-.bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.35); /* затемнение */
-}
-.content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
 }
