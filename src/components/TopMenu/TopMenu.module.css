@@ -81,13 +81,6 @@ button {
   cursor: pointer;
 }
 
-.beans {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 40px;
-  opacity: 0.7;
-}
 
 
 .decor {
@@ -171,10 +164,8 @@ opacity: 1;
 /* зерна */
 .beans {
   width: 180px;
-  
-  margin-left: -60px; /* 🔥 СЕКРЕТ — сдвигаем влево */
-  
-  z-index: 1;
+  margin-left: -60px;
+  position: relative;
 }
 
 .bannerText h3 {
@@ -212,16 +203,17 @@ opacity: 1;
 
 /* текст */
 .bannerText h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .bannerText p {
   font-size: 15px;
-  line-height: 1.5;
-  opacity: 0.9;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
-
 /* анимация */
 @keyframes fadeIn {
   from {
@@ -250,11 +242,7 @@ opacity: 1;
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.1)
-  );
+  z-index: 0;
 }
 
 /* ===== ОСНОВНОЙ БЛОК ===== */
