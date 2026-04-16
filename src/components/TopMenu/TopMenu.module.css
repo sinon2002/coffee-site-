@@ -2,6 +2,7 @@
   width: 100%;
   padding: 60px 40px;
   text-align: center;
+  background: transparent;
 }
 
 .menu h2 {
@@ -26,7 +27,7 @@
 
 .card {
   position: relative;
-  background: #f5e1d8;
+ background: rgba(255,255,255,0.08);
   padding: 25px;
   border-radius: 20px;
   text-align: center;
