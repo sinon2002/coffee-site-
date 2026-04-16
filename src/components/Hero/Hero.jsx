@@ -70,7 +70,7 @@ export default function Hero() {
        <div className={styles.milkWave}>
   <svg viewBox="0 0 1440 320">
     <path
-      fill="#F2DFD8"
+      fill="#FFF5EE"
       d="M0,224L60,213.3C120,203,240,181,360,170.7C480,160,600,160,720,176C840,192,960,224,1080,224C1200,224,1320,192,1380,176L1440,160L1440,320L0,320Z"
     >
       <animate
