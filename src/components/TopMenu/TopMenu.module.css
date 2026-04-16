@@ -246,16 +246,58 @@ opacity: 1;
 /* ===== ОСНОВНОЙ БЛОК ===== */
 .sliderBlock {
   position: relative;
-  margin-top: 80px;
-  padding: 120px 80px;
-  border-radius: 30px;
   overflow: hidden;
 
-  /* красивый кофейный фон */
-  background: radial-gradient(circle at center, #7b4b3a, #4b2e2b);
-  color: white;
-}
+  border-radius: 30px;
+  padding: 80px;
 
+  background: linear-gradient(120deg, #4b2e2b, #7b4b3a, #3a1f1c);
+  background-size: 200% 200%;
+
+  animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.sliderBlock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.08), transparent 40%),
+              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05), transparent 40%);
+
+  animation: floatBg 12s ease-in-out infinite;
+}
+@keyframes floatBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.sliderBlock::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at center, rgba(255,255,255,0.06), transparent 60%);
+  filter: blur(60px);
+
+  z-index: 0;
+}
 /* ===== ЦЕНТР ===== */
 .center {
   position: relative;
