@@ -287,22 +287,24 @@ opacity: 1;
 /* ===== БЛОКИ С ТЕКСТОМ ===== */
 .textBlock {
   position: absolute;
-  width: 240px;
-
+  width: 260px;
   padding: 20px;
   border-radius: 20px;
 
   background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
   color: white;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
 
   transition: 0.3s;
 }
 
 /* hover эффект */
 .textBlock:hover {
-  transform: translateY(-5px) scale(1.03);
+  transform: translateY(-5px);
   background: rgba(255,255,255,0.12);
 }
 
