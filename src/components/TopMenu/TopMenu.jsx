@@ -165,6 +165,7 @@ useEffect(() => {
 
 <div className={styles.sliderBlock}>
   <div className={styles.center}>
+    <div className={styles.steam}></div>
 
     <img
       src={slides[index].img}
