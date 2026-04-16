@@ -52,19 +52,48 @@ const items = [
 const slides = [
   {
     img: ascofee1,
-    title: "Капучина ",
-     leftTop: "Высокое качество зерен",
-    leftBottom: "Атмосфера вдохновения",
-    rightTop: "Индивидуальный подход",
-    rightBottom: "Профессиональная команда",
+    title: "Капучино",
+
+    leftTop: {
+      title: "Высокое качество зерен",
+      desc: "Только отборная арабика для насыщенного вкуса",
+    },
+    leftBottom: {
+      title: "Атмосфера вдохновения",
+      desc: "Создаём уют и настроение в каждой чашке",
+    },
+
+    rightTop: {
+      title: "Индивидуальный подход",
+      desc: "Учитываем предпочтения каждого гостя",
+    },
+    rightBottom: {
+      title: "Профессиональная команда",
+      desc: "Бариста с опытом и любовью к делу",
+    },
   },
+
   {
     img: ascofee2,
-    title: " Латте",
-    left: "Нежный вкус",
-    bottomLeft: "Японский чай",
-    right: "Мягкий аромат",
-    bottomRight: "Идеально утром",
+    title: "Латте",
+
+    leftTop: {
+      title: "Нежный вкус",
+      desc: "Лёгкий и мягкий кофейный баланс",
+    },
+    leftBottom: {
+      title: "Японский чай",
+      desc: "Ноты матча и натуральных ингредиентов",
+    },
+
+    rightTop: {
+      title: "Мягкий аромат",
+      desc: "Идеально подходит для утра",
+    },
+    rightBottom: {
+      title: "Идеально утром",
+      desc: "Лёгкость и энергия на весь день",
+    },
   },
 ];
 const [index, setIndex] = useState(0);
@@ -146,31 +175,35 @@ useEffect(() => {
 
     {/* ЛЕВО ВЕРХ */}
     <div className={`${styles.textBlock} ${styles.leftTop}`}>
-      <h4>{slides[index].leftTop}</h4>
-      <p>{slides[index].leftBottom}</p>
+      <h4>{slides[index].leftTop.title}</h4>
+      <p>{slides[index].leftTop.desc}</p>
     </div>
 
     {/* ЛЕВО НИЗ */}
     <div className={`${styles.textBlock} ${styles.leftBottom}`}>
-      <h4>{slides[index].leftBottom}</h4>
-      <p>{slides[index].leftDesc}</p>
+      <h4>{slides[index].leftBottom.title}</h4>
+      <p>{slides[index].leftBottom.desc}</p>
     </div>
 
     {/* ПРАВО ВЕРХ */}
     <div className={`${styles.textBlock} ${styles.rightTop}`}>
-      <h4>{slides[index].rightTop}</h4>
-      <p>{slides[index].rightBottom}</p>
+      <h4>{slides[index].rightTop.title}</h4>
+      <p>{slides[index].rightTop.desc}</p>
     </div>
 
     {/* ПРАВО НИЗ */}
     <div className={`${styles.textBlock} ${styles.rightBottom}`}>
-      <h4>{slides[index].rightBottom}</h4>
-      <p>{slides[index].rightDesc}</p>
+      <h4>{slides[index].rightBottom.title}</h4>
+      <p>{slides[index].rightBottom.desc}</p>
     </div>
+
+    {/* КНОПКА */}
+    <button className={styles.orderBtn}>
+      Заказать →
+    </button>
 
   </div>
 </div>
-
     </section>
   );
 }
