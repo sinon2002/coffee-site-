@@ -23,9 +23,9 @@ body::before {
 
   background:
     radial-gradient(circle at 20% 30%, #DDB48E 0%, transparent 40%),
-    radial-gradient(circle at 80% 20%, #C07D41 0%, transparent 40%),
-    radial-gradient(circle at 30% 80%, #CEA87A 0%, transparent 40%),
-    radial-gradient(circle at 70% 70%, #8A573F 0%, transparent 50%);
+    radial-gradient(circle at 80% 20%, #8A573F 0%, transparent 40%),
+    radial-gradient(circle at 30% 80%, #4C2E28 0%, transparent 40%),
+    radial-gradient(circle at 70% 70%, #C07D41 0%, transparent 50%);
 
   filter: blur(80px);
   animation: moveBg 7s ease-in-out infinite alternate;
