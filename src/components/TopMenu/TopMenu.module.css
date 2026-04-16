@@ -104,25 +104,24 @@ opacity: 1;
   gap: 40px;
 
   padding: 40px 60px;
-
-  max-width: 1100px; /* 🔥 главное */
-  margin: 60px auto; /* центрирует */
-
+  max-width: 1100px;
+  margin: 60px auto;
 
   border-radius: 20px;
 
+  background:
+    url("/leaf.png"),
+    linear-gradient(135deg, #4b2e2b, #2e1b18);
 
-  background: linear-gradient(135deg, #4b2e2b, #2e1b18);
-
+  background-size: 250px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, center;
 
   color: white;
 
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
   position: relative;
   overflow: hidden;
-  
-  background-image: url("/leaf.png"); /* или твой файл */
-
 }
 
 /* ✨ декоративные линии (как на макете) */
@@ -205,12 +204,7 @@ opacity: 1;
 }
 
 /* текст */
-.bannerText h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
+
 
 .bannerText p {
   font-size: 15px;
@@ -245,7 +239,7 @@ opacity: 1;
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  background: rgba(0,0,0,0.2);
 }
 
 /* ===== ОСНОВНОЙ БЛОК ===== */
