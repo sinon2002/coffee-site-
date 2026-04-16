@@ -50,46 +50,49 @@ export default function Hero() {
       </div>
 
       {/* 🎨 ФОН */}
-      <div className={styles.backgrounds}>
-        {[
-          "#7CB686",
-          "#5F9CCF",
-          "#ED746E",
-          "#979797",
-          "#292929",
-        ].map((color, i) => (
-          <div
-            key={i}
-            className={`${styles.bg} ${
-              i === index ? styles.bgActive : ""
-            }`}
-            style={{ background: `radial-gradient(circle, ${color}, black)` }}
-          />
-        ))}
-      </div>
-       <div className={styles.milkWave}>
-  <svg viewBox="0 0 1440 320">
+  
+<div className={styles.backgrounds}>
+  {[
+    "#7CB686",
+    "#5F9CCF",
+    "#ED746E",
+    "#979797",
+    "#292929",
+  ].map((color, i) => (
+    <div
+      key={i}
+      className={`${styles.bg} ${
+        i === index ? styles.bgActive : ""
+      }`}
+      style={{
+        background: `radial-gradient(circle at center, ${color}, #1a1a1a)`
+      }}
+    />
+  ))}
+</div>
+
+{/* 🥛 МОЛОЧНАЯ ВОЛНА */}
+<div className={styles.milkWave}>
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
     <path
-      fill="#FFF5EE"
       d="M0,224L60,213.3C120,203,240,181,360,170.7C480,160,600,160,720,176C840,192,960,224,1080,224C1200,224,1320,192,1380,176L1440,160L1440,320L0,320Z"
+      fill="#FFF5EE"
     >
       <animate
         attributeName="d"
-        dur="6s"
+        dur="5s"
         repeatCount="indefinite"
         values="
         M0,224L60,213.3C120,203,240,181,360,170.7C480,160,600,160,720,176C840,192,960,224,1080,224C1200,224,1320,192,1380,176L1440,160L1440,320L0,320Z;
-        
-        M0,240L60,200C120,160,240,140,360,150C480,160,600,200,720,210C840,220,960,200,1080,180C1200,160,1320,160,1380,170L1440,180L1440,320L0,320Z;
-        
+
+        M0,260L60,220C120,180,240,150,360,160C480,170,600,210,720,220C840,230,960,210,1080,190C1200,170,1320,180,1380,190L1440,200L1440,320L0,320Z;
+
         M0,224L60,213.3C120,203,240,181,360,170.7C480,160,600,160,720,176C840,192,960,224,1080,224C1200,224,1320,192,1380,176L1440,160L1440,320L0,320Z
         "
       />
     </path>
   </svg>
 </div>
-
-<div className={styles.leaves}></div>
     </section>
   );
 }
