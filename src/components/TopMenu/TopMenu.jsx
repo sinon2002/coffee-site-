@@ -143,7 +143,7 @@ useEffect(() => {
         ))}
       </div>
 <div className={styles.decor}></div>
-<img src="/coffee-beans.png" className={styles.beans} />
+
 
       <div className={styles.banner}>
   
