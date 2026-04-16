@@ -265,12 +265,28 @@ opacity: 1;
 
 /* ===== КОФЕ ===== */
 .coffee {
-  position: absolute;
+  position: relative;
   top: 32%; /* было 42 → не работало визуально */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 280px;
-  z-index: 2;
+  z-index: 3;
+   filter: drop-shadow(0 20px 25px rgba(0,0,0,0.35));
+}
+/* ДОПОЛНИТЕЛЬНАЯ мягкая тень снизу */
+.coffee::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 25px;
+
+  background: radial-gradient(circle, rgba(0,0,0,0.4), transparent);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 /* ===== ЗАГОЛОВОК ===== */
@@ -300,6 +316,8 @@ opacity: 1;
   border: 1px solid rgba(255,255,255,0.1);
 
   transition: 0.3s;
+   backdrop-filter: blur(10px);
+   padding: 18px;
 }
 
 /* hover эффект */
@@ -336,14 +354,17 @@ opacity: 1;
 /* ===== ТЕКСТ ===== */
 .textBlock h4 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 6px;
+ font-family: "Playfair Display", serif;
+  color: #fff;
 }
 
 .textBlock p {
   font-size: 14px;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.4;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
 }
 
 .orderBtn {
