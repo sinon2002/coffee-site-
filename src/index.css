@@ -11,30 +11,39 @@ html, body, #root {
 
 body {
   background: linear-gradient(
-    120deg,
+    135deg,
     #4b2e2b,
     #6b3e2e,
     #2e1b18,
     #7a4b32
   );
-  
-  background-size: 300% 300%;
-  animation: gradientMove 12s ease infinite;
+
+  background-size: 400% 400%;
+  animation: gradientMove 20s linear infinite; /* 🔥 плавнее */
 }
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
   }
-  25% {
-    background-position: 50% 100%;
-  }
-  50% {
+  100% {
     background-position: 100% 50%;
   }
-  75% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: radial-gradient(circle at 20% 30%, #7a4b32 0%, transparent 40%),
+              radial-gradient(circle at 80% 70%, #4b2e2b 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, #2e1b18 0%, transparent 60%);
+
+  filter: blur(60px);
+  animation: floatBg 25s ease-in-out infinite;
+}
+@keyframes floatBg {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-40px, 30px); }
+  100% { transform: translate(0,0); }
 }
