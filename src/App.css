@@ -38,3 +38,37 @@
 .read-the-docs {
   color: #888;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(
+    120deg,
+    #4b2e2b,
+    #6b3e2e,
+    #2e1b18,
+    #7a4b32
+  );
+  
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
