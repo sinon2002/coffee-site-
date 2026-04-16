@@ -28,7 +28,7 @@ body::before {
     radial-gradient(circle at 70% 70%, #8A573F 0%, transparent 50%);
 
   filter: blur(80px);
-  animation: moveBg 20s ease-in-out infinite alternate;
+  animation: moveBg 7s ease-in-out infinite alternate;
 }
 @keyframes moveBg {
   0% {
