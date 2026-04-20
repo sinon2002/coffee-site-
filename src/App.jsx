@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Cards from "./components/Cards/Cards";
@@ -7,14 +9,28 @@ import Menu from "./pages/Menu";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Hero />
-      <Cards />
-       <TopMenu />
-       <Footer />
-      <Route path="/menu" element={<Menu />} />
-    </>
+
+      <Routes>
+        {/* Главная */}
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Hero />
+              <Cards />
+              <TopMenu />
+            </>
+          } 
+        />
+
+        {/* Меню */}
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   );
 }
 
