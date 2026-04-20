@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Cards from "./components/Cards/Cards";
 import TopMenu from "./components/TopMenu/TopMenu";
 import Footer from "./components/Footer/Footer";
+import Menu from "./pages/Menu";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Cards />
        <TopMenu />
        <Footer />
+      <Route path="/menu" element={<Menu />} />
     </>
   );
 }
