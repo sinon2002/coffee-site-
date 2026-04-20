@@ -1,22 +1,23 @@
 import styles from "./Cards.module.css";
+import { Link } from "react-router-dom";
 
 export default function Cards() {
   return (
     <div className={styles.cards}>
       
-      <a href="/about" className={styles.card}>
+      <Link to="/about" className={styles.card}>
         <div className={styles.overlay}>
           <h2>О нас</h2>
           <p>Узнать больше</p>
         </div>
-      </a>
+      </Link>
 
-      <a href="/menu" className={styles.card}>
+      <Link to="/menu" className={styles.card}>
         <div className={styles.overlay}>
           <h2>Меню</h2>
           <p>Узнать больше</p>
         </div>
-      </a>
+      </Link>
 
     </div>
   );
