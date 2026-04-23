@@ -173,21 +173,24 @@ img {
 }
 
 .secondary {
-  display: inline-block;
-  text-decoration: none; /* УБИРАЕТ СИНЮЮ ПОДЧЁРКНУТУЮ ССЫЛКУ */
-  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none !important;
+  color: #6b3e2e !important;
+
   background: transparent;
   border: 2px solid #6b3e2e;
-  color: #6b3e2e;
   padding: 12px 24px;
   border-radius: 30px;
+
   cursor: pointer;
   transition: 0.3s;
 }
-
 .secondary:hover {
-  background: #6b3e2e;
-  color: white;
+ background: #6b3e2e;
+  color: white !important;
 }
 .leaves {
   position: absolute;
@@ -227,4 +230,12 @@ img {
 .milkWave {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+
+.secondary:visited,
+.secondary:active,
+.secondary:focus {
+  text-decoration: none;
+  color: #6b3e2e;
 }
