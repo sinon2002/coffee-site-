@@ -13,19 +13,17 @@ function App() {
       <Header />
 
       <Routes>
-        {/* Главная */}
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             <>
               <Hero />
               <Cards />
               <TopMenu />
             </>
-          } 
+          }
         />
 
-        {/* Меню */}
         <Route path="/menu" element={<Menu />} />
       </Routes>
 
