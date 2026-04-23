@@ -173,6 +173,9 @@ img {
 }
 
 .secondary {
+  display: inline-block;
+  text-decoration: none; /* УБИРАЕТ СИНЮЮ ПОДЧЁРКНУТУЮ ССЫЛКУ */
+  
   background: transparent;
   border: 2px solid #6b3e2e;
   color: #6b3e2e;
@@ -180,10 +183,6 @@ img {
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
- 
-  display: inline-block;
-  text-decoration: none;
-
 }
 
 .secondary:hover {
