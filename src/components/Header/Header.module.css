@@ -20,14 +20,12 @@ header a:hover {
 }
 
 .header {
-  position: absolute;
-  top: 0;
   width: 100%;
-  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  padding: 15px 40px;
+  box-sizing: border-box;
 }
 
 .logo {
