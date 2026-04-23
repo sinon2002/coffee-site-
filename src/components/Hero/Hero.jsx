@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
-
+import { Link } from "react-router-dom";
 import coffee1 from "../../assets/coffe1.png";
 import coffee2 from "../../assets/coffe2.png";
 import coffee3 from "../../assets/coffe3.png";
@@ -28,7 +28,9 @@ export default function Hero() {
           <p>Аромат, который заряжает энергией</p>
           <div className={styles.buttons}>
   <button className={styles.primary}>Заказать сейчас</button>
-  <button className={styles.secondary}>Попробовать меню</button>
+ <Link to="/menu" className="secondary">
+  Попробовать меню
+</Link>
 </div>
         </div>
       </div>
