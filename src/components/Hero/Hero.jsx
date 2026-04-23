@@ -28,9 +28,9 @@ export default function Hero() {
           <p>Аромат, который заряжает энергией</p>
           <div className={styles.buttons}>
   <button className={styles.primary}>Заказать сейчас</button>
- <Link to="/menu" className="secondary">
+<button to="/menu" className="secondary">
   Попробовать меню
-</Link>
+</button>
 </div>
         </div>
       </div>
