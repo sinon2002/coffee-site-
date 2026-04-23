@@ -12,7 +12,7 @@ function Menu() {
 
       <div className="menu-list">
         <div className="menu-item">
-          <img src={coffee1} alt="coffe" />
+          <img src={coffee1} alt="coffee" />
           <h3>Капучино</h3>
           <p>150 сом</p>
           <button>Заказать</button>
@@ -26,7 +26,7 @@ function Menu() {
         </div>
 
         <div className="menu-item">
-          <img src={coffee3} alt="coffe" />
+          <img src={coffee3} alt="coffee" />
           <h3>Эспрессо</h3>
           <p>120 сом</p>
           <button>Заказать</button>
