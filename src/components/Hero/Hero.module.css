@@ -6,7 +6,8 @@ background: linear-gradient(135deg, #f5e1d8, #f3d6c6);
   align-items: center;
   padding: 100px 60px;
   overflow: hidden;
-
+ width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -35,7 +36,10 @@ background: linear-gradient(135deg, #f5e1d8, #f3d6c6);
   height: 100%;
   overflow: hidden; /* убирает чёрную полосу */
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 .image {
   position: absolute;
   top: 50%;
