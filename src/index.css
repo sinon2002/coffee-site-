@@ -16,6 +16,11 @@ body {
   background: #F2DFD8;
   overflow-x: hidden;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /* ГЛАВНЫЙ ЖИВОЙ ФОН */
 body::before {
