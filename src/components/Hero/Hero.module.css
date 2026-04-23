@@ -173,7 +173,7 @@ img {
 }
 
 .secondary {
-  background: transparent; /* ❗ УБИРАЕМ ЗАЛИВКУ */
+   background: transparent;
   border: 2px solid #6b3e2e;
   color: #6b3e2e;
 
