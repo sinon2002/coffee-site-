@@ -213,3 +213,11 @@ img {
   bottom: 20px;
   width: 100%;
 }
+.hero,
+.slider,
+.backgrounds,
+.waveWrapper,
+.milkWave {
+  max-width: 100%;
+  overflow-x: hidden;
+}
