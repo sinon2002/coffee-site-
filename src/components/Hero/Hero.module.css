@@ -133,12 +133,12 @@ img {
 
 .wave {
   position: absolute;
-  width: 200%;
+  width: 120%;
   height: 140px;
   background: #ffffff;
   border-radius: 50% 50% 0 0;
   bottom: -70px;
-  left: -50%;
+  left: -10%;
   animation: waveMove 6s ease-in-out infinite;
 }
 
