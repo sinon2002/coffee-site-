@@ -1,9 +1,9 @@
 import React from "react";
 import "./Menu.css";
 
-import coffee1 from "../assets/coffee1.png";
-import coffee2 from "../assets/coffee2.png";
-import coffee3 from "../assets/coffee3.png";
+import coffee1 from "../assets/coffe1.png";
+import coffee2 from "../assets/coffe2.png";
+import coffee3 from "../assets/coffe3.png";
 
 function Menu() {
   return (
@@ -12,7 +12,7 @@ function Menu() {
 
       <div className="menu-list">
         <div className="menu-item">
-          <img src={coffee1} alt="coffee" />
+          <img src={coffee1} alt="coffe" />
           <h3>Капучино</h3>
           <p>150 сом</p>
           <button>Заказать</button>
@@ -26,7 +26,7 @@ function Menu() {
         </div>
 
         <div className="menu-item">
-          <img src={coffee3} alt="coffee" />
+          <img src={coffee3} alt="coffe" />
           <h3>Эспрессо</h3>
           <p>120 сом</p>
           <button>Заказать</button>
