@@ -8,6 +8,7 @@ background: linear-gradient(135deg, #f5e1d8, #f3d6c6);
   overflow: hidden;
  width: 100%;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .container {
@@ -34,7 +35,8 @@ background: linear-gradient(135deg, #f5e1d8, #f3d6c6);
   top: 0;
   width: 100%; /* ВАЖНО */
   height: 100%;
-  overflow: hidden; /* убирает чёрную полосу */
+  overflow: hidden;
+  max-width: 100%; /* убирает чёрную полосу */
 }
 img {
   max-width: 100%;
@@ -43,20 +45,18 @@ img {
 .image {
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 60%; /* было 70% */
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
   transition: all 1s ease;
 }
-
 /* главный */
 .active {
-  left: 65%;
+  left: 60%; /* было 65% */
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   z-index: 3;
 }
-
 /* слева */
 .previous {
   left: 50%;
@@ -67,7 +67,7 @@ img {
 
 /* справа */
 .next {
-  left: 80%;
+  left: 75%; /* было 80% ❌ */
   transform: translate(-50%, -50%) scale(0.7);
   opacity: 0.6;
   filter: blur(4px);
@@ -111,7 +111,7 @@ img {
 }
 .coffee {
   width: 300px;
-  transition: all 0.8s ease;
+  max-width: 100%;
 }
 .text h1 {
   font-size: 60px;
