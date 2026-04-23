@@ -180,6 +180,10 @@ img {
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
+ 
+  display: inline-block;
+  text-decoration: none;
+
 }
 
 .secondary:hover {
