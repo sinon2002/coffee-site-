@@ -239,3 +239,12 @@ img {
   text-decoration: none;
   color: #6b3e2e;
 }
+
+
+a {
+  color: blue;
+}
+a.secondary {
+  color: #6b3e2e !important;
+  text-decoration: none !important;
+}
