@@ -8,8 +8,9 @@ import coffee4 from "../../assets/coffe4.png";
 import coffee5 from "../../assets/coffe5.png";
 
 const images = [coffee1, coffee2, coffee3, coffee4, coffee5];
-const navigate = useNavigate();
+
 export default function Hero() {
+  const navigate = useNavigate(); // ✅ ВОТ СЮДА
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
