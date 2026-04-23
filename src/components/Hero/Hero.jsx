@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import coffee1 from "../../assets/coffe1.png";
 import coffee2 from "../../assets/coffe2.png";
 import coffee3 from "../../assets/coffe3.png";
@@ -8,7 +8,7 @@ import coffee4 from "../../assets/coffe4.png";
 import coffee5 from "../../assets/coffe5.png";
 
 const images = [coffee1, coffee2, coffee3, coffee4, coffee5];
-
+const navigate = useNavigate();
 export default function Hero() {
   const [index, setIndex] = useState(0);
 
@@ -28,9 +28,9 @@ export default function Hero() {
           <p>Аромат, который заряжает энергией</p>
           <div className={styles.buttons}>
   <button className={styles.primary}>Заказать сейчас</button>
-<Link to="/menu" className="secondary">
+<button className="secondary" onClick={() => navigate("/menu")}>
   Попробовать меню
-</Link>
+</button>
 </div>
         </div>
       </div>
