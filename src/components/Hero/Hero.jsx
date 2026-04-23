@@ -29,7 +29,7 @@ export default function Hero() {
           <p>Аромат, который заряжает энергией</p>
           <div className={styles.buttons}>
   <button className={styles.primary}>Заказать сейчас</button>
-<button className="secondary" onClick={() => navigate("/menu")}>
+<button className={styles.secondary} onClick={() => navigate("/menu")}>
   Попробовать меню
 </button>
 </div>
