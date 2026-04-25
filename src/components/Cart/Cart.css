@@ -1,21 +1,29 @@
-.cart {
+.cartPanel {
   position: fixed;
-  right: 20px;
-  top: 100px;
-  width: 250px;
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background: #0f1b2d;
+  color: white;
+  padding: 20px;
+  transition: 0.3s;
   z-index: 999;
 }
 
-.cart h2 {
-  margin-bottom: 10px;
+.cartPanel.open {
+  right: 0;
 }
 
-.cart-item {
+.cartHeader {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.cartItem {
+  background: #1c2b3f;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
