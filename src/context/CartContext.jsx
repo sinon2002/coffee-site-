@@ -7,6 +7,7 @@ export function CartProvider({ children }) {
 
   const addToCart = (item) => {
     setCart((prev) => [...prev, item]);
+    console.log("Добавлено в корзину:", item);
   };
 
   return (
