@@ -62,3 +62,20 @@ header button:hover {
 header {
   background-color: #4b2e2b; /* более тёмный кофе */
 }
+
+.cartIcon {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #3bb0ff;
+  color: white;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
