@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Cards from "./components/Cards/Cards";
@@ -28,6 +28,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <Cart />
     </Router>
   );
 }
